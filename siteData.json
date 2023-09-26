@@ -8,6 +8,7 @@
         "about-us": "About Us",
         "project-team": "Project team",
         "wei-xiang": "Wei Xiang",
+        "ren-jing": "Ren Jing",
         "jane-doe": "Jane Doe",
         "johnny-doe": "Johnny Doe",
         "jean-doe": "Jean Doe",
@@ -146,6 +147,14 @@
     {
       "src": "team/roerere.md",
       "title": "RoeReRe's Project Portfolio Page",
+      "headings": {
+        "project-baymeds-v-2103": "Project: BayMeds v.2103"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/teerenjing.md",
+      "title": "TeeRenJing's Project Portfolio Page",
       "headings": {
         "project-baymeds-v-2103": "Project: BayMeds v.2103"
       },
