@@ -10,7 +10,7 @@
         "wei-xiang": "Wei Xiang",
         "ren-jing": "Ren Jing",
         "shyan-yong": "Shyan-Yong",
-        "johnny-doe": "Johnny Doe",
+        "jing-yu": "Jing Yu",
         "jean-doe": "Jean Doe",
         "james-doe": "James Doe"
       },
@@ -133,6 +133,14 @@
       "title": "",
       "headings": {
         "baymeds-v-2103": "BayMeds v.2103"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/jingyu987.md",
+      "title": "jingyu987's Project Portfolio Page",
+      "headings": {
+        "project-baymeds-v-2103": "Project: BayMeds v.2103"
       },
       "headingKeywords": {}
     },
