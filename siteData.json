@@ -11,8 +11,7 @@
         "ren-jing": "Ren Jing",
         "shyan-yong": "Shyan-Yong",
         "jing-yu": "Jing Yu",
-        "jean-doe": "Jean Doe",
-        "james-doe": "James Doe"
+        "wei-jie": "Wei Jie"
       },
       "headingKeywords": {}
     },
@@ -133,6 +132,14 @@
       "title": "",
       "headings": {
         "baymeds-v-2103": "BayMeds v.2103"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/chongweijie29.md",
+      "title": "ChongWeiJie29's Project Portfolio Page",
+      "headings": {
+        "project-baymeds-v-2103": "Project: BayMeds v.2103"
       },
       "headingKeywords": {}
     },
