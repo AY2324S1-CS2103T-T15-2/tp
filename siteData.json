@@ -112,7 +112,7 @@
         "features": "Features",
         "viewing-help-help-coming-soon": "Viewing help : help [coming soon]",
         "adding-a-prescription-add": "Adding a prescription : add",
-        "listing-all-persons-list": "Listing all persons : list",
+        "listing-all-prescriptions-list": "Listing all prescriptions : list",
         "editing-a-person-edit": "Editing a person : edit",
         "locating-persons-by-name-find": "Locating persons by name : find",
         "deleting-a-medication-delete": "Deleting a medication : delete",
