@@ -4,19 +4,19 @@ import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.AppUtil.checkArgument;
 
 /**
- * Represents a Person's date in the address book.
+ * Represents a Prescription's date in the prescription list.
  * Guarantees: immutable; is valid as declared in {@link #isValidDate(String)}
  */
 public class Date {
 
     public static final String MESSAGE_CONSTRAINTS =
-            "Dates should only contain alphanumeric characters and spaces, and it should not be blank";
+            "Dates should be in the dd/mm/yyyy format, and it should not be blank";
 
     /*
-     * The first character of the address must not be a whitespace,
+     * The first character of the date must not be a whitespace,
      * otherwise " " (a blank string) becomes a valid input.
      */
-    public static final String VALIDATION_REGEX = "[\\p{Alnum}][\\p{Alnum} ]*";
+    public static final String VALIDATION_REGEX = "([0-9]{2})/([0-9]{2})/([0-9]{4})";
 
     public final String fullDate;
 

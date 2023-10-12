@@ -10,13 +10,13 @@ import static seedu.address.commons.util.AppUtil.checkArgument;
 public class Dosage {
 
     public static final String MESSAGE_CONSTRAINTS =
-            "Dosages should only contain alphanumeric characters and spaces, and it should not be blank";
+            "Dosages should only contain numeric characters, and it should not be blank";
 
     /*
      * The first character of the address must not be a whitespace,
      * otherwise " " (a blank string) becomes a valid input.
      */
-    public static final String VALIDATION_REGEX = "[\\p{Alnum}][\\p{Alnum} ]*";
+    public static final String VALIDATION_REGEX = "[0-9]+";
 
     public final String fullDosage;
 

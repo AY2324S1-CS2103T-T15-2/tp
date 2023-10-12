@@ -36,7 +36,7 @@ class JsonAdaptedPrescription {
     // private final List<JsonAdaptedTag> tags = new ArrayList<>();
 
     /**
-     * Constructs a {@code JsonAdaptedPrescription} with the given person details.
+     * Constructs a {@code JsonAdaptedPrescription} with the given prescription details.
      */
     @JsonCreator
     public JsonAdaptedPrescription(@JsonProperty("name") String name, @JsonProperty("dosage") String dosage,
@@ -74,7 +74,7 @@ class JsonAdaptedPrescription {
     }
 
     /**
-     * Converts this Jackson-friendly adapted person object into the model's {@code Prescription} object.
+     * Converts this Jackson-friendly adapted prescription object into the model's {@code Prescription} object.
      *
      * @throws IllegalValueException if there were any data constraints violated in the adapted prescription.
      */

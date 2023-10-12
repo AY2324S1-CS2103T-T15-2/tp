@@ -1,12 +1,15 @@
 package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_ADDRESS;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_EMAIL;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
-import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PERSONS;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_DOSAGE;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_FREQUENCY;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_START_DATE;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_END_DATE;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_EXPIRY_DATE;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_TOTAL_STOCK;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_NOTE;
+import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PRESCRIPTIONS;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -42,13 +45,15 @@ public class EditCommand extends Command {
             + "Existing values will be overwritten by the input values.\n"
             + "Parameters: INDEX (must be a positive integer) "
             + "[" + PREFIX_NAME + "NAME] "
-            + "[" + PREFIX_PHONE + "PHONE] "
-            + "[" + PREFIX_EMAIL + "EMAIL] "
-            + "[" + PREFIX_ADDRESS + "ADDRESS] "
-            + "[" + PREFIX_TAG + "TAG]...\n"
+            + "[" + PREFIX_DOSAGE + "DOSAGE] "
+            + "[" + PREFIX_FREQUENCY + "FREQUENCY] "
+            + "[" + PREFIX_START_DATE + "START DATE] "
+            + "[" + PREFIX_END_DATE + "END DATE] "
+            + "[" + PREFIX_EXPIRY_DATE + "EXPIRY DATE] "
+            + "[" + PREFIX_TOTAL_STOCK + "TOTAL STOCK] "
+            + "[" + PREFIX_NOTE + "NOTE] \n"
             + "Example: " + COMMAND_WORD + " 1 "
-            + PREFIX_PHONE + "91234567 "
-            + PREFIX_EMAIL + "johndoe@example.com";
+            + PREFIX_DOSAGE + "2 ";
 
     public static final String MESSAGE_EDIT_PERSON_SUCCESS = "Edited Prescription: %1$s";
     public static final String MESSAGE_NOT_EDITED = "At least one field to edit must be provided.";
@@ -86,7 +91,7 @@ public class EditCommand extends Command {
         }
 
         model.setPrescription(prescriptionToEdit, editedPrescription);
-        model.updateFilteredPrescriptionList(PREDICATE_SHOW_ALL_PERSONS);
+        model.updateFilteredPrescriptionList(PREDICATE_SHOW_ALL_PRESCRIPTIONS);
         return new CommandResult(String.format(MESSAGE_EDIT_PERSON_SUCCESS, Messages.format(editedPrescription)));
     }
 

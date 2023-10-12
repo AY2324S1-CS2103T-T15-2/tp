@@ -8,7 +8,6 @@ import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.ReadOnlyPrescriptionList;
-import seedu.address.model.person.Person;
 import seedu.address.model.prescription.Prescription;
 
 /**
@@ -31,11 +30,11 @@ public interface Logic {
      */
     ReadOnlyPrescriptionList getPrescriptionList();
 
-    /** Returns an unmodifiable view of the filtered list of persons */
+    /** Returns an unmodifiable view of the filtered list of prescriptions */
     ObservableList<Prescription> getFilteredPrescriptionList();
 
     /**
-     * Returns the user prefs' address book file path.
+     * Returns the user prefs' prescription list file path.
      */
     Path getPrescriptionListFilePath();
 

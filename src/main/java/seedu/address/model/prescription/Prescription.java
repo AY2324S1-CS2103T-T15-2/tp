@@ -95,7 +95,8 @@ public class Prescription {
         }
 
         return otherPrescription != null
-                && otherPrescription.getName().equals(getName());
+                && otherPrescription.getName().equals(getName())
+                && otherPrescription.getStartDate().equals(getStartDate());
     }
 
     /**

@@ -16,10 +16,10 @@ import seedu.address.model.prescription.Prescription;
 /**
  * An Immutable PrescriptionList that is serializable to JSON format.
  */
-@JsonRootName(value = "addressbook")
+@JsonRootName(value = "prescriptionlist")
 class JsonSerializablePrescriptionList {
 
-    public static final String MESSAGE_DUPLICATE_PERSON = "Prescriptions list contains duplicate prescription(s).";
+    public static final String MESSAGE_DUPLICATE_PRESCRIPTION = "Prescriptions list contains duplicate prescription(s).";
 
     private final List<JsonAdaptedPrescription> prescriptions = new ArrayList<>();
 
@@ -41,7 +41,7 @@ class JsonSerializablePrescriptionList {
     }
 
     /**
-     * Converts this address book into the model's {@code PrescriptionList} object.
+     * Converts this prescription list into the model's {@code PrescriptionList} object.
      *
      * @throws IllegalValueException if there were any data constraints violated.
      */
@@ -50,7 +50,7 @@ class JsonSerializablePrescriptionList {
         for (JsonAdaptedPrescription jsonAdaptedPrescription : prescriptions) {
             Prescription prescription = jsonAdaptedPrescription.toModelType();
             if (prescriptionList.hasPrescription(prescription)) {
-                throw new IllegalValueException(MESSAGE_DUPLICATE_PERSON);
+                throw new IllegalValueException(MESSAGE_DUPLICATE_PRESCRIPTION);
             }
             prescriptionList.addPrescription(prescription);
         }

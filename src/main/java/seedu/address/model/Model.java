@@ -12,7 +12,7 @@ import seedu.address.model.prescription.Prescription;
  */
 public interface Model {
     /** {@code Predicate} that always evaluate to true */
-    Predicate<Prescription> PREDICATE_SHOW_ALL_PERSONS = unused -> true;
+    Predicate<Prescription> PREDICATE_SHOW_ALL_PRESCRIPTIONS = unused -> true;
 
     /**
      * Replaces user prefs data with the data in {@code userPrefs}.
@@ -45,7 +45,7 @@ public interface Model {
     void setPrescriptionListFilePath(Path prescriptionListFilePath);
 
     /**
-     * Replaces address book data with the data in {@code prescriptionList}.
+     * Replaces prescription list data with the data in {@code prescriptionList}.
      */
     void setPrescriptionList(ReadOnlyPrescriptionList prescriptionList);
 
@@ -53,34 +53,34 @@ public interface Model {
     ReadOnlyPrescriptionList getPrescriptionList();
 
     /**
-     * Returns true if a person with the same identity as {@code person} exists in the address book.
+     * Returns true if a prescription with the same identity as {@code prescription} exists in the prescription list.
      */
-    boolean hasPrescription(Prescription person);
+    boolean hasPrescription(Prescription prescription);
 
     /**
-     * Deletes the given person.
-     * The person must exist in the address book.
+     * Deletes the given prescription.
+     * The prescription must exist in the prescription list.
      */
     void deletePrescription(Prescription target);
 
     /**
-     * Adds the given person.
-     * {@code person} must not already exist in the address book.
+     * Adds the given prescription.
+     * {@code prescription} must not already exist in the prescription list.
      */
-    void addPrescription(Prescription person);
+    void addPrescription(Prescription prescription);
 
     /**
-     * Replaces the given person {@code target} with {@code editedPrescription}.
-     * {@code target} must exist in the address book.
-     * The person identity of {@code editedPrescription} must not be the same as another existing person in the address book.
+     * Replaces the given prescription {@code target} with {@code editedPrescription}.
+     * {@code target} must exist in the prescription list.
+     * The prescription identity of {@code editedPrescription} must not be the same as another existing prescription in the prescription list.
      */
     void setPrescription(Prescription target, Prescription editedPrescription);
 
-    /** Returns an unmodifiable view of the filtered person list */
+    /** Returns an unmodifiable view of the filtered prescription list */
     ObservableList<Prescription> getFilteredPrescriptionList();
 
     /**
-     * Updates the filter of the filtered person list to filter by the given {@code predicate}.
+     * Updates the filter of the filtered prescription list to filter by the given {@code predicate}.
      * @throws NullPointerException if {@code predicate} is null.
      */
     void updateFilteredPrescriptionList(Predicate<Prescription> predicate);

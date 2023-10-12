@@ -10,13 +10,13 @@ import static seedu.address.commons.util.AppUtil.checkArgument;
 public class Frequency {
 
     public static final String MESSAGE_CONSTRAINTS =
-            "Frequencies should only contain alphanumeric characters and spaces, and it should not be blank";
+            "Frequencies should only be one of the following (Daily / Weekly / Monthly), and it should not be blank";
 
     /*
      * The first character of the address must not be a whitespace,
      * otherwise " " (a blank string) becomes a valid input.
      */
-    public static final String VALIDATION_REGEX = "[\\p{Alnum}][\\p{Alnum} ]*";
+    public static final String VALIDATION_REGEX = "[(Daily)(Weekly)(Monthly)]*";
 
     public final String fullFrequency;
 

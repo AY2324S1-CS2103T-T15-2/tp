@@ -14,7 +14,7 @@ import seedu.address.commons.core.LogsCenter;
 import seedu.address.model.prescription.Prescription;
 
 /**
- * Represents the in-memory model of the address book data.
+ * Represents the in-memory model of the prescription list data.
  */
 public class ModelManager implements Model {
     private static final Logger logger = LogsCenter.getLogger(ModelManager.class);
@@ -29,7 +29,7 @@ public class ModelManager implements Model {
     public ModelManager(ReadOnlyPrescriptionList prescriptionList, ReadOnlyUserPrefs userPrefs) {
         requireAllNonNull(prescriptionList, userPrefs);
 
-        logger.fine("Initializing with address book: " + prescriptionList + " and user prefs " + userPrefs);
+        logger.fine("Initializing with prescription list: " + prescriptionList + " and user prefs " + userPrefs);
 
         this.prescriptionList = new PrescriptionList(prescriptionList);
         this.userPrefs = new UserPrefs(userPrefs);
@@ -88,9 +88,9 @@ public class ModelManager implements Model {
     }
 
     @Override
-    public boolean hasPrescription(Prescription person) {
-        requireNonNull(person);
-        return prescriptionList.hasPrescription(person);
+    public boolean hasPrescription(Prescription prescription) {
+        requireNonNull(prescription);
+        return prescriptionList.hasPrescription(prescription);
     }
 
     @Override
@@ -99,9 +99,9 @@ public class ModelManager implements Model {
     }
 
     @Override
-    public void addPrescription(Prescription person) {
-        prescriptionList.addPrescription(person);
-        updateFilteredPrescriptionList(PREDICATE_SHOW_ALL_PERSONS);
+    public void addPrescription(Prescription prescription) {
+        prescriptionList.addPrescription(prescription);
+        updateFilteredPrescriptionList(PREDICATE_SHOW_ALL_PRESCRIPTIONS);
     }
 
     @Override
