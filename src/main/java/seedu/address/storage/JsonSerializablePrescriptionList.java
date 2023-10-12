@@ -19,7 +19,8 @@ import seedu.address.model.prescription.Prescription;
 @JsonRootName(value = "prescriptionlist")
 class JsonSerializablePrescriptionList {
 
-    public static final String MESSAGE_DUPLICATE_PRESCRIPTION = "Prescriptions list contains duplicate prescription(s).";
+    public static final String MESSAGE_DUPLICATE_PRESCRIPTION = "Prescriptions list "
+        + "contains duplicate prescription(s).";
 
     private final List<JsonAdaptedPrescription> prescriptions = new ArrayList<>();
 
@@ -27,7 +28,8 @@ class JsonSerializablePrescriptionList {
      * Constructs a {@code JsonSerializablePrescriptionList} with the given prescriptions.
      */
     @JsonCreator
-    public JsonSerializablePrescriptionList(@JsonProperty("prescriptions") List<JsonAdaptedPrescription> prescriptions) {
+    public JsonSerializablePrescriptionList(
+            @JsonProperty("prescriptions") List<JsonAdaptedPrescription> prescriptions) {
         this.prescriptions.addAll(prescriptions);
     }
 
@@ -37,7 +39,8 @@ class JsonSerializablePrescriptionList {
      * @param source future changes to this will not affect the created {@code JsonSerializablePrescriptionList}.
      */
     public JsonSerializablePrescriptionList(ReadOnlyPrescriptionList source) {
-        prescriptions.addAll(source.getPrescriptionList().stream().map(JsonAdaptedPrescription::new).collect(Collectors.toList()));
+        prescriptions.addAll(source.getPrescriptionList().stream().map(
+            JsonAdaptedPrescription::new).collect(Collectors.toList()));
     }
 
     /**

@@ -7,7 +7,6 @@ import java.util.logging.Logger;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-
 import seedu.address.commons.core.Config;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.commons.core.Version;
@@ -58,7 +57,8 @@ public class MainApp extends Application {
 
         UserPrefsStorage userPrefsStorage = new JsonUserPrefsStorage(config.getUserPrefsFilePath());
         UserPrefs userPrefs = initPrefs(userPrefsStorage);
-        PrescriptionListStorage prescriptionListStorage = new JsonPrescriptionListStorage(userPrefs.getPrescriptionListFilePath());
+        PrescriptionListStorage prescriptionListStorage = new JsonPrescriptionListStorage(
+            userPrefs.getPrescriptionListFilePath());
         storage = new StorageManager(prescriptionListStorage, userPrefsStorage);
 
         model = initModelManager(storage, userPrefs);

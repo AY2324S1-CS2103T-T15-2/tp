@@ -11,12 +11,12 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_START_DATE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TOTAL_STOCK;
 import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PRESCRIPTIONS;
 
-import java.util.Collections;
-import java.util.HashSet;
+// import java.util.Collections;
+// import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.Set;
+// import java.util.Set;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.CollectionUtil;
@@ -31,7 +31,7 @@ import seedu.address.model.prescription.Name;
 import seedu.address.model.prescription.Note;
 import seedu.address.model.prescription.Prescription;
 import seedu.address.model.prescription.Stock;
-import seedu.address.model.tag.Tag;
+// import seedu.address.model.tag.Tag;
 
 /**
  * Edits the details of an existing prescription in the address book.
@@ -99,12 +99,14 @@ public class EditCommand extends Command {
      * Creates and returns a {@code Prescription} with the details of {@code prescriptionToEdit}
      * edited with {@code editPrescriptionDescriptor}.
      */
-    private static Prescription createEditedPrescription(Prescription prescriptionToEdit, EditPrescriptionDescriptor editPrescriptionDescriptor) {
+    private static Prescription createEditedPrescription(Prescription prescriptionToEdit,
+            EditPrescriptionDescriptor editPrescriptionDescriptor) {
         assert prescriptionToEdit != null;
 
         Name updatedName = editPrescriptionDescriptor.getName().orElse(prescriptionToEdit.getName());
         Dosage updatedDosage = editPrescriptionDescriptor.getDosage().orElse(prescriptionToEdit.getDosage());
-        Frequency updatedFrequency = editPrescriptionDescriptor.getFrequency().orElse(prescriptionToEdit.getFrequency());
+        Frequency updatedFrequency = editPrescriptionDescriptor.getFrequency().orElse(
+                prescriptionToEdit.getFrequency());
         Date updatedStartDate = editPrescriptionDescriptor.getStartDate().orElse(prescriptionToEdit.getStartDate());
         Date updatedEndDate = editPrescriptionDescriptor.getEndDate().orElse(prescriptionToEdit.getEndDate());
         Date updatedExpiryDate = editPrescriptionDescriptor.getExpiryDate().orElse(prescriptionToEdit.getExpiryDate());
@@ -177,7 +179,8 @@ public class EditCommand extends Command {
          * Returns true if at least one field is edited.
          */
         public boolean isAnyFieldEdited() {
-            return CollectionUtil.isAnyNonNull(name, dosage, frequency, startDate, endDate, expiryDate, totalStock, note);
+            return CollectionUtil.isAnyNonNull(name, dosage, frequency, startDate,
+                    endDate, expiryDate, totalStock, note);
         }
 
         public void setName(Name name) {

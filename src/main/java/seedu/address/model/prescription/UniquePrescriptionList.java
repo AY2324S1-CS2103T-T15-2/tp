@@ -13,10 +13,12 @@ import seedu.address.model.prescription.exceptions.PrescriptionNotFoundException
 
 /**
  * A list of prescriptions that enforces uniqueness between its elements and does not allow nulls.
- * A prescription is considered unique by comparing using {@code Prescription#isSamePrescription(Prescription)}. As such, adding and updating of
- * prescriptions uses Prescription#isSamePrescription(Prescription) for equality so as to ensure that the prescription being added or updated is
- * unique in terms of identity in the UniquePrescriptionList. However, the removal of a prescription uses Prescription#equals(Object) so
- * as to ensure that the prescription with exactly the same fields will be removed.
+ * A prescription is considered unique by comparing using
+ * {@code Prescription#isSamePrescription(Prescription)}. As such, adding and updating of
+ * prescriptions uses Prescription#isSamePrescription(Prescription) for equality so as to ensure
+ * that the prescription being added or updated is unique in terms of identity in the
+ * UniquePrescriptionList. However, the removal of a prescription uses Prescription#equals(Object)
+ * so as to ensure that the prescription with exactly the same fields will be removed.
  *
  * Supports a minimal set of list operations.
  *
@@ -51,7 +53,8 @@ public class UniquePrescriptionList implements Iterable<Prescription> {
     /**
      * Replaces the prescription {@code target} in the list with {@code editedPrescription}.
      * {@code target} must exist in the list.
-     * The prescription identity of {@code editedPrescription} must not be the same as another existing prescription in the list.
+     * The prescription identity of {@code editedPrescription} must not be the same as
+     * another existing prescription in the list.
      */
     public void setPrescription(Prescription target, Prescription editedPrescription) {
         requireAllNonNull(target, editedPrescription);

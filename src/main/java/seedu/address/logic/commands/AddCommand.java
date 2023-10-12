@@ -45,7 +45,8 @@ public class AddCommand extends Command {
             + PREFIX_NOTE + "Test note";
 
     public static final String MESSAGE_SUCCESS = "New prescription added: %1$s";
-    public static final String MESSAGE_DUPLICATE_PRESCRIPTION = "This prescription already exists in the prescription list";
+    public static final String MESSAGE_DUPLICATE_PRESCRIPTION = "This prescription already "
+            + "exists in the prescription list";
 
     private final Prescription toAdd;
 

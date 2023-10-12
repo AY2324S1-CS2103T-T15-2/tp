@@ -2,13 +2,13 @@ package seedu.address.model.prescription;
 
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
-import java.util.Collections;
-import java.util.HashSet;
+// import java.util.Collections;
+// import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
+// import java.util.Set;
 
 import seedu.address.commons.util.ToStringBuilder;
-import seedu.address.model.tag.Tag;
+// import seedu.address.model.tag.Tag;
 
 /**
  * Represents a Prescription in the address book.
@@ -77,10 +77,10 @@ public class Prescription {
         return note;
     }
 
-    /**
-     * Returns an immutable tag set, which throws {@code UnsupportedOperationException}
-     * if modification is attempted.
-     */
+    // /**
+    //  * Returns an immutable tag set, which throws {@code UnsupportedOperationException}
+    //  * if modification is attempted.
+    //  */
     // public Set<Tag> getTags() {
     //     return Collections.unmodifiableSet(tags);
     // }

@@ -72,7 +72,8 @@ public interface Model {
     /**
      * Replaces the given prescription {@code target} with {@code editedPrescription}.
      * {@code target} must exist in the prescription list.
-     * The prescription identity of {@code editedPrescription} must not be the same as another existing prescription in the prescription list.
+     * The prescription identity of {@code editedPrescription} must not be the same as another
+     * existing prescription in the prescription list.
      */
     void setPrescription(Prescription target, Prescription editedPrescription);
 

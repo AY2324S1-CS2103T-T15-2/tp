@@ -78,7 +78,8 @@ public class PrescriptionList implements ReadOnlyPrescriptionList {
     /**
      * Replaces the given prescription {@code target} in the list with {@code editedPrescription}.
      * {@code target} must exist in the address book.
-     * The prescription identity of {@code editedPrescription} must not be the same as another existing prescription in the address book.
+     * The prescription identity of {@code editedPrescription} must not be the same as another
+     * existing prescription in the address book.
      */
     public void setPrescription(Prescription target, Prescription editedPrescription) {
         requireNonNull(editedPrescription);
