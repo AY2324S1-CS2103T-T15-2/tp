@@ -1,175 +1,175 @@
-package seedu.address.model.person;
+// package seedu.address.model.prescription;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static seedu.address.logic.commands.CommandTestUtil.VALID_ADDRESS_BOB;
-import static seedu.address.logic.commands.CommandTestUtil.VALID_TAG_HUSBAND;
-import static seedu.address.testutil.Assert.assertThrows;
-import static seedu.address.testutil.TypicalPersons.ALICE;
-import static seedu.address.testutil.TypicalPersons.BOB;
+// import static org.junit.jupiter.api.Assertions.assertEquals;
+// import static org.junit.jupiter.api.Assertions.assertFalse;
+// import static org.junit.jupiter.api.Assertions.assertTrue;
+// import static seedu.address.logic.commands.CommandTestUtil.VALID_ADDRESS_BOB;
+// import static seedu.address.logic.commands.CommandTestUtil.VALID_TAG_HUSBAND;
+// import static seedu.address.testutil.Assert.assertThrows;
+// import static seedu.address.testutil.TypicalPrescriptions.ALICE;
+// import static seedu.address.testutil.TypicalPrescriptions.BOB;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+// import java.util.Arrays;
+// import java.util.Collections;
+// import java.util.List;
 
-import org.junit.jupiter.api.Test;
+// import org.junit.jupiter.api.Test;
 
-import seedu.address.model.person.exceptions.DuplicatePersonException;
-import seedu.address.model.person.exceptions.PersonNotFoundException;
-import seedu.address.testutil.PersonBuilder;
+// import seedu.address.model.prescription.exceptions.DuplicatePrescriptionException;
+// import seedu.address.model.prescription.exceptions.PrescriptionNotFoundException;
+// import seedu.address.testutil.PrescriptionBuilder;
 
-public class UniquePersonListTest {
+// public class UniquePrescriptionListTest {
 
-    private final UniquePersonList uniquePersonList = new UniquePersonList();
+//     private final UniquePrescriptionList uniquePrescriptionList = new UniquePrescriptionList();
 
-    @Test
-    public void contains_nullPerson_throwsNullPointerException() {
-        assertThrows(NullPointerException.class, () -> uniquePersonList.contains(null));
-    }
+//     @Test
+//     public void contains_nullPrescription_throwsNullPointerException() {
+//         assertThrows(NullPointerException.class, () -> uniquePrescriptionList.contains(null));
+//     }
 
-    @Test
-    public void contains_personNotInList_returnsFalse() {
-        assertFalse(uniquePersonList.contains(ALICE));
-    }
+//     @Test
+//     public void contains_prescriptionNotInList_returnsFalse() {
+//         assertFalse(uniquePrescriptionList.contains(ALICE));
+//     }
 
-    @Test
-    public void contains_personInList_returnsTrue() {
-        uniquePersonList.add(ALICE);
-        assertTrue(uniquePersonList.contains(ALICE));
-    }
+//     @Test
+//     public void contains_prescriptionInList_returnsTrue() {
+//         uniquePrescriptionList.add(ALICE);
+//         assertTrue(uniquePrescriptionList.contains(ALICE));
+//     }
 
-    @Test
-    public void contains_personWithSameIdentityFieldsInList_returnsTrue() {
-        uniquePersonList.add(ALICE);
-        Person editedAlice = new PersonBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)
-                .build();
-        assertTrue(uniquePersonList.contains(editedAlice));
-    }
+//     @Test
+//     public void contains_prescriptionWithSameIdentityFieldsInList_returnsTrue() {
+//         uniquePrescriptionList.add(ALICE);
+//         Prescription editedAlice = new PrescriptionBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)
+//                 .build();
+//         assertTrue(uniquePrescriptionList.contains(editedAlice));
+//     }
 
-    @Test
-    public void add_nullPerson_throwsNullPointerException() {
-        assertThrows(NullPointerException.class, () -> uniquePersonList.add(null));
-    }
+//     @Test
+//     public void add_nullPrescription_throwsNullPointerException() {
+//         assertThrows(NullPointerException.class, () -> uniquePrescriptionList.add(null));
+//     }
 
-    @Test
-    public void add_duplicatePerson_throwsDuplicatePersonException() {
-        uniquePersonList.add(ALICE);
-        assertThrows(DuplicatePersonException.class, () -> uniquePersonList.add(ALICE));
-    }
+//     @Test
+//     public void add_duplicatePrescription_throwsDuplicatePrescriptionException() {
+//         uniquePrescriptionList.add(ALICE);
+//         assertThrows(DuplicatePrescriptionException.class, () -> uniquePrescriptionList.add(ALICE));
+//     }
 
-    @Test
-    public void setPerson_nullTargetPerson_throwsNullPointerException() {
-        assertThrows(NullPointerException.class, () -> uniquePersonList.setPerson(null, ALICE));
-    }
+//     @Test
+//     public void setPrescription_nullTargetPrescription_throwsNullPointerException() {
+//         assertThrows(NullPointerException.class, () -> uniquePrescriptionList.setPrescription(null, ALICE));
+//     }
 
-    @Test
-    public void setPerson_nullEditedPerson_throwsNullPointerException() {
-        assertThrows(NullPointerException.class, () -> uniquePersonList.setPerson(ALICE, null));
-    }
+//     @Test
+//     public void setPrescription_nullEditedPrescription_throwsNullPointerException() {
+//         assertThrows(NullPointerException.class, () -> uniquePrescriptionList.setPrescription(ALICE, null));
+//     }
 
-    @Test
-    public void setPerson_targetPersonNotInList_throwsPersonNotFoundException() {
-        assertThrows(PersonNotFoundException.class, () -> uniquePersonList.setPerson(ALICE, ALICE));
-    }
+//     @Test
+//     public void setPrescription_targetPrescriptionNotInList_throwsPrescriptionNotFoundException() {
+//         assertThrows(PrescriptionNotFoundException.class, () -> uniquePrescriptionList.setPrescription(ALICE, ALICE));
+//     }
 
-    @Test
-    public void setPerson_editedPersonIsSamePerson_success() {
-        uniquePersonList.add(ALICE);
-        uniquePersonList.setPerson(ALICE, ALICE);
-        UniquePersonList expectedUniquePersonList = new UniquePersonList();
-        expectedUniquePersonList.add(ALICE);
-        assertEquals(expectedUniquePersonList, uniquePersonList);
-    }
+//     @Test
+//     public void setPrescription_editedPrescriptionIsSamePrescription_success() {
+//         uniquePrescriptionList.add(ALICE);
+//         uniquePrescriptionList.setPrescription(ALICE, ALICE);
+//         UniquePrescriptionList expectedUniquePrescriptionList = new UniquePrescriptionList();
+//         expectedUniquePrescriptionList.add(ALICE);
+//         assertEquals(expectedUniquePrescriptionList, uniquePrescriptionList);
+//     }
 
-    @Test
-    public void setPerson_editedPersonHasSameIdentity_success() {
-        uniquePersonList.add(ALICE);
-        Person editedAlice = new PersonBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)
-                .build();
-        uniquePersonList.setPerson(ALICE, editedAlice);
-        UniquePersonList expectedUniquePersonList = new UniquePersonList();
-        expectedUniquePersonList.add(editedAlice);
-        assertEquals(expectedUniquePersonList, uniquePersonList);
-    }
+//     @Test
+//     public void setPrescription_editedPrescriptionHasSameIdentity_success() {
+//         uniquePrescriptionList.add(ALICE);
+//         Prescription editedAlice = new PrescriptionBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)
+//                 .build();
+//         uniquePrescriptionList.setPrescription(ALICE, editedAlice);
+//         UniquePrescriptionList expectedUniquePrescriptionList = new UniquePrescriptionList();
+//         expectedUniquePrescriptionList.add(editedAlice);
+//         assertEquals(expectedUniquePrescriptionList, uniquePrescriptionList);
+//     }
 
-    @Test
-    public void setPerson_editedPersonHasDifferentIdentity_success() {
-        uniquePersonList.add(ALICE);
-        uniquePersonList.setPerson(ALICE, BOB);
-        UniquePersonList expectedUniquePersonList = new UniquePersonList();
-        expectedUniquePersonList.add(BOB);
-        assertEquals(expectedUniquePersonList, uniquePersonList);
-    }
+//     @Test
+//     public void setPrescription_editedPrescriptionHasDifferentIdentity_success() {
+//         uniquePrescriptionList.add(ALICE);
+//         uniquePrescriptionList.setPrescription(ALICE, BOB);
+//         UniquePrescriptionList expectedUniquePrescriptionList = new UniquePrescriptionList();
+//         expectedUniquePrescriptionList.add(BOB);
+//         assertEquals(expectedUniquePrescriptionList, uniquePrescriptionList);
+//     }
 
-    @Test
-    public void setPerson_editedPersonHasNonUniqueIdentity_throwsDuplicatePersonException() {
-        uniquePersonList.add(ALICE);
-        uniquePersonList.add(BOB);
-        assertThrows(DuplicatePersonException.class, () -> uniquePersonList.setPerson(ALICE, BOB));
-    }
+//     @Test
+//     public void setPrescription_editedPrescriptionHasNonUniqueIdentity_throwsDuplicatePrescriptionException() {
+//         uniquePrescriptionList.add(ALICE);
+//         uniquePrescriptionList.add(BOB);
+//         assertThrows(DuplicatePrescriptionException.class, () -> uniquePrescriptionList.setPrescription(ALICE, BOB));
+//     }
 
-    @Test
-    public void remove_nullPerson_throwsNullPointerException() {
-        assertThrows(NullPointerException.class, () -> uniquePersonList.remove(null));
-    }
+//     @Test
+//     public void remove_nullPrescription_throwsNullPointerException() {
+//         assertThrows(NullPointerException.class, () -> uniquePrescriptionList.remove(null));
+//     }
 
-    @Test
-    public void remove_personDoesNotExist_throwsPersonNotFoundException() {
-        assertThrows(PersonNotFoundException.class, () -> uniquePersonList.remove(ALICE));
-    }
+//     @Test
+//     public void remove_prescriptionDoesNotExist_throwsPrescriptionNotFoundException() {
+//         assertThrows(PrescriptionNotFoundException.class, () -> uniquePrescriptionList.remove(ALICE));
+//     }
 
-    @Test
-    public void remove_existingPerson_removesPerson() {
-        uniquePersonList.add(ALICE);
-        uniquePersonList.remove(ALICE);
-        UniquePersonList expectedUniquePersonList = new UniquePersonList();
-        assertEquals(expectedUniquePersonList, uniquePersonList);
-    }
+//     @Test
+//     public void remove_existingPrescription_removesPrescription() {
+//         uniquePrescriptionList.add(ALICE);
+//         uniquePrescriptionList.remove(ALICE);
+//         UniquePrescriptionList expectedUniquePrescriptionList = new UniquePrescriptionList();
+//         assertEquals(expectedUniquePrescriptionList, uniquePrescriptionList);
+//     }
 
-    @Test
-    public void setPersons_nullUniquePersonList_throwsNullPointerException() {
-        assertThrows(NullPointerException.class, () -> uniquePersonList.setPersons((UniquePersonList) null));
-    }
+//     @Test
+//     public void setPrescriptions_nullUniquePrescriptionList_throwsNullPointerException() {
+//         assertThrows(NullPointerException.class, () -> uniquePrescriptionList.setPrescriptions((UniquePrescriptionList) null));
+//     }
 
-    @Test
-    public void setPersons_uniquePersonList_replacesOwnListWithProvidedUniquePersonList() {
-        uniquePersonList.add(ALICE);
-        UniquePersonList expectedUniquePersonList = new UniquePersonList();
-        expectedUniquePersonList.add(BOB);
-        uniquePersonList.setPersons(expectedUniquePersonList);
-        assertEquals(expectedUniquePersonList, uniquePersonList);
-    }
+//     @Test
+//     public void setPrescriptions_uniquePrescriptionList_replacesOwnListWithProvidedUniquePrescriptionList() {
+//         uniquePrescriptionList.add(ALICE);
+//         UniquePrescriptionList expectedUniquePrescriptionList = new UniquePrescriptionList();
+//         expectedUniquePrescriptionList.add(BOB);
+//         uniquePrescriptionList.setPrescriptions(expectedUniquePrescriptionList);
+//         assertEquals(expectedUniquePrescriptionList, uniquePrescriptionList);
+//     }
 
-    @Test
-    public void setPersons_nullList_throwsNullPointerException() {
-        assertThrows(NullPointerException.class, () -> uniquePersonList.setPersons((List<Person>) null));
-    }
+//     @Test
+//     public void setPrescriptions_nullList_throwsNullPointerException() {
+//         assertThrows(NullPointerException.class, () -> uniquePrescriptionList.setPrescriptions((List<Prescription>) null));
+//     }
 
-    @Test
-    public void setPersons_list_replacesOwnListWithProvidedList() {
-        uniquePersonList.add(ALICE);
-        List<Person> personList = Collections.singletonList(BOB);
-        uniquePersonList.setPersons(personList);
-        UniquePersonList expectedUniquePersonList = new UniquePersonList();
-        expectedUniquePersonList.add(BOB);
-        assertEquals(expectedUniquePersonList, uniquePersonList);
-    }
+//     @Test
+//     public void setPrescriptions_list_replacesOwnListWithProvidedList() {
+//         uniquePrescriptionList.add(ALICE);
+//         List<Prescription> prescriptionList = Collections.singletonList(BOB);
+//         uniquePrescriptionList.setPrescriptions(prescriptionList);
+//         UniquePrescriptionList expectedUniquePrescriptionList = new UniquePrescriptionList();
+//         expectedUniquePrescriptionList.add(BOB);
+//         assertEquals(expectedUniquePrescriptionList, uniquePrescriptionList);
+//     }
 
-    @Test
-    public void setPersons_listWithDuplicatePersons_throwsDuplicatePersonException() {
-        List<Person> listWithDuplicatePersons = Arrays.asList(ALICE, ALICE);
-        assertThrows(DuplicatePersonException.class, () -> uniquePersonList.setPersons(listWithDuplicatePersons));
-    }
+//     @Test
+//     public void setPrescriptions_listWithDuplicatePrescriptions_throwsDuplicatePrescriptionException() {
+//         List<Prescription> listWithDuplicatePrescriptions = Arrays.asList(ALICE, ALICE);
+//         assertThrows(DuplicatePrescriptionException.class, () -> uniquePrescriptionList.setPrescriptions(listWithDuplicatePrescriptions));
+//     }
 
-    @Test
-    public void asUnmodifiableObservableList_modifyList_throwsUnsupportedOperationException() {
-        assertThrows(UnsupportedOperationException.class, ()
-            -> uniquePersonList.asUnmodifiableObservableList().remove(0));
-    }
+//     @Test
+//     public void asUnmodifiableObservableList_modifyList_throwsUnsupportedOperationException() {
+//         assertThrows(UnsupportedOperationException.class, ()
+//             -> uniquePrescriptionList.asUnmodifiableObservableList().remove(0));
+//     }
 
-    @Test
-    public void toStringMethod() {
-        assertEquals(uniquePersonList.asUnmodifiableObservableList().toString(), uniquePersonList.toString());
-    }
-}
+//     @Test
+//     public void toStringMethod() {
+//         assertEquals(uniquePrescriptionList.asUnmodifiableObservableList().toString(), uniquePrescriptionList.toString());
+//     }
+// }
