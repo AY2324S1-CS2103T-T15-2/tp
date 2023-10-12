@@ -12,11 +12,13 @@ import java.util.stream.Stream;
 
 import seedu.address.logic.commands.AddCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
-import seedu.address.model.person.Address;
-import seedu.address.model.person.Email;
-import seedu.address.model.person.Name;
-import seedu.address.model.person.Person;
-import seedu.address.model.person.Phone;
+import seedu.address.model.prescription.Date;
+import seedu.address.model.prescription.Dosage;
+import seedu.address.model.prescription.Frequency;
+import seedu.address.model.prescription.Name;
+import seedu.address.model.prescription.Note;
+import seedu.address.model.prescription.Prescription;
+import seedu.address.model.prescription.Stock;
 import seedu.address.model.tag.Tag;
 
 /**
@@ -40,14 +42,18 @@ public class AddCommandParser implements Parser<AddCommand> {
 
         argMultimap.verifyNoDuplicatePrefixesFor(PREFIX_NAME, PREFIX_PHONE, PREFIX_EMAIL, PREFIX_ADDRESS);
         Name name = ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME).get());
-        Phone phone = ParserUtil.parsePhone(argMultimap.getValue(PREFIX_PHONE).get());
-        Email email = ParserUtil.parseEmail(argMultimap.getValue(PREFIX_EMAIL).get());
-        Address address = ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ADDRESS).get());
-        Set<Tag> tagList = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));
+        Dosage dosage = ParserUtil.parseDosage(argMultimap.getValue(PREFIX_PHONE).get());
+        Frequency frequency = ParserUtil.parseFrequency(argMultimap.getValue(PREFIX_EMAIL).get());
+        Date startDate = ParserUtil.parseStartDate(argMultimap.getValue(PREFIX_ADDRESS).get());
+        Date endDate = ParserUtil.parseEndDate(argMultimap.getValue(PREFIX_ADDRESS).get());
+        Date expiryDate = ParserUtil.parseExpiryDate(argMultimap.getValue(PREFIX_ADDRESS).get());
+        Stock totalStock = ParserUtil.parseTotalStock(argMultimap.getValue(PREFIX_ADDRESS).get());
+        Note note = ParserUtil.parseNote(argMultimap.getValue(PREFIX_ADDRESS).get());
+        // Set<Tag> tagList = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));
 
-        Person person = new Person(name, phone, email, address, tagList);
+        Prescription prescription = new Prescription(name, dosage, frequency, startDate, endDate, expiryDate, totalStock, note);
 
-        return new AddCommand(person);
+        return new AddCommand(prescription);
     }
 
     /**
