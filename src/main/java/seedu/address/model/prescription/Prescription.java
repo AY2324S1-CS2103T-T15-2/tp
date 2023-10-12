@@ -32,7 +32,7 @@ public class Prescription {
     /**
      * Every field must be present and not null.
      */
-    public Prescription(Name name, Dosage dosage, Frequency frequency, Date startDate, 
+    public Prescription(Name name, Dosage dosage, Frequency frequency, Date startDate,
                         Date endDate, Date expiryDate, Stock totalStock, Note note) {
         requireAllNonNull(name);
         this.name = name;
@@ -128,7 +128,7 @@ public class Prescription {
     @Override
     public int hashCode() {
         // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(name, dosage, frequency, startDate, 
+        return Objects.hash(name, dosage, frequency, startDate,
                         endDate, expiryDate, totalStock, note);
     }
 

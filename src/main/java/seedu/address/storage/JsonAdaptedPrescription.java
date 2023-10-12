@@ -41,7 +41,7 @@ class JsonAdaptedPrescription {
     @JsonCreator
     public JsonAdaptedPrescription(@JsonProperty("name") String name, @JsonProperty("dosage") String dosage,
             @JsonProperty("frequency") String frequency, @JsonProperty("startDate") String startDate,
-            @JsonProperty("endDate") String endDate, @JsonProperty("expiryDate") String expiryDate, 
+            @JsonProperty("endDate") String endDate, @JsonProperty("expiryDate") String expiryDate,
             @JsonProperty("totalStock") String totalStock, @JsonProperty("note") String note) {
         this.name = name;
         this.dosage = dosage;
@@ -149,7 +149,7 @@ class JsonAdaptedPrescription {
         final Note modelNote = new Note(note);
 
         // final Set<Tag> modelTags = new HashSet<>(personTags);
-        return new Prescription(modelName, modelDosage, modelFrequency, modelStartDate, 
+        return new Prescription(modelName, modelDosage, modelFrequency, modelStartDate,
                         modelEndDate, modelExpiryDate, modelTotalStock, modelNote);
     }
 
