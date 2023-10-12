@@ -6,13 +6,13 @@ import java.util.stream.Collectors;
 
 import seedu.address.model.PrescriptionList;
 import seedu.address.model.ReadOnlyPrescriptionList;
-import seedu.address.model.prescription.Name;
+import seedu.address.model.prescription.Date;
 import seedu.address.model.prescription.Dosage;
 import seedu.address.model.prescription.Frequency;
-import seedu.address.model.prescription.Date;
-import seedu.address.model.prescription.Stock;
+import seedu.address.model.prescription.Name;
 import seedu.address.model.prescription.Note;
 import seedu.address.model.prescription.Prescription;
+import seedu.address.model.prescription.Stock;
 import seedu.address.model.tag.Tag;
 
 /**

@@ -1,14 +1,14 @@
 package seedu.address.logic.parser;
 
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_DOSAGE;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_FREQUENCY;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_START_DATE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_END_DATE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_EXPIRY_DATE;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_TOTAL_STOCK;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_FREQUENCY;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NOTE;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_START_DATE;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_TOTAL_STOCK;
 
 import java.util.Set;
 import java.util.stream.Stream;

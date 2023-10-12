@@ -9,11 +9,12 @@ import java.util.Set;
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
-import seedu.address.model.prescription.Name;
 import seedu.address.model.prescription.Date;
 import seedu.address.model.prescription.Dosage;
 import seedu.address.model.prescription.Frequency;
+import seedu.address.model.prescription.Name;
 import seedu.address.model.prescription.Note;
+import seedu.address.model.prescription.Prescription;
 import seedu.address.model.prescription.Stock;
 import seedu.address.model.tag.Tag;
 
