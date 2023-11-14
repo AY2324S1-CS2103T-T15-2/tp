@@ -470,7 +470,7 @@ with(this){return _c('p',[_c('em',[_v("{More to be added}")])])}
 with(this){return _c('h3',{attrs:{"id":"glossary"}},[_v("Glossary"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#glossary","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('strong',[_v("Mainstream OS")]),_v(": Windows, Linux, Unix, OS-X")]),_v(" "),_c('li',[_c('strong',[_v("Medication")]),_v(": A drug identified by a name.")]),_v(" "),_c('li',[_c('strong',[_v("Prescription")]),_v(": Uniquely identified by a medication, other fields are optional.")]),_v(" "),_c('li',[_c('strong',[_v("Conflicting drugs")]),_v(": Drugs that should not be taken together.")])])}
+with(this){return _c('ul',[_c('li',[_c('strong',[_v("Mainstream OS")]),_v(": Windows, Linux, Unix, OS-X")]),_v(" "),_c('li',[_c('strong',[_v("Medication")]),_v(": A drug identified by a name.")]),_v(" "),_c('li',[_c('strong',[_v("Prescription")]),_v(": Uniquely identified by a medication and a start date.")]),_v(" "),_c('li',[_c('strong',[_v("Conflicting drugs")]),_v(": Drugs that should not be taken together.")])])}
 },function anonymous(
 ) {
 with(this){return _c('h2',{attrs:{"id":"appendix-instructions-for-manual-testing"}},[_c('strong',[_v("Appendix: Instructions for manual testing")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#appendix-instructions-for-manual-testing","onclick":"event.stopPropagation()"}})])}
@@ -512,6 +512,6 @@ with(this){return _c('p',[_v("We also expanded on the existing storage and model
 with(this){return _c('p',[_v("We also went ahead to revamp the UI of BayMeds. In our attempt to improve the aesthetics and enhance the user interactions and user experience, we created an entirely new UI. Apart from making the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("commandResult")]),_v(" box more readable, we also included fields and their identifiers in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("prescriptionCard")]),_v(", organised in a neat format. Using our knowledge of the importance of colours in visual communication, we added a functionality to allow the UI to switch colours to indicate the consumption status of the prescription, using a more striking colour (red) to indicate that the prescription has yet to be consumed.")])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Tue, 14 Nov 2023, 12:14:01 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Tue, 14 Nov 2023, 12:17:29 GMT+8]")])])])}
 }];
   
