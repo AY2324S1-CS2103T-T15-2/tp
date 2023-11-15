@@ -123,6 +123,8 @@
         "how-to-use-this-guide": "How to use this guide",
         "quick-start": "Quick start",
         "graphical-user-interface": "Graphical User Interface",
+        "overview": "Overview",
+        "prescription-card": "Prescription Card",
         "features": "Features",
         "how-to-add-a-prescription-add": "How to add a prescription : add",
         "how-to-list-all-current-prescriptions-list": "How to list all current prescriptions : list",
@@ -141,7 +143,8 @@
         "faq": "FAQ",
         "known-issues": "Known issues",
         "glossary": "Glossary",
-        "command-summary": "Command summary"
+        "command-summary": "Command summary",
+        "troubleshooting": "Troubleshooting"
       },
       "headingKeywords": {}
     },
